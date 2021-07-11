@@ -1,0 +1,19 @@
+dictname: Cambridge English Dictionary
+generateDay: Jul 11, 2021
+cover: english.jpg
+inLanguage: en
+outLanguage: en
+lookupIndex: english
+
+description: "
+Cambridge English Dictionary
+
+Generated date: Jul 11, 2021
+"
+
+lst_entry:
+
+publisher: Cambridge University Press
+creator: Cambridge University Press
+dataSource: Cambridge Dictionaries Online
+contributor: https://github.com/tegieng7/cambridge-dictionary

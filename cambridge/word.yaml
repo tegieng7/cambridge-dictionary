@@ -1,0 +1,125 @@
+# Layout of word
+entry:
+  cid: cid
+  title:
+  pos:
+  ipaUS:
+  ipaUK:
+  posSense:
+    guideWord:
+    pvTitle:
+    defBlock:
+      code:
+      gram:
+      domain:
+      trans:
+      define:
+      examp:
+
+# CSS selector to find blocks
+css:
+  dictionary: div.pr.dictionary
+  entry: .pr.entry-body__el
+  cid: .entry-body__el > .cid
+  title: .pos-header > .di-title
+  pos: .pos-header .pos
+  ipaUS: .pos-header > .us .ipa
+  ipaUK: .pos-header > .uk .ipa
+  posSense: .pos-body > .pr.dsense
+  guideWord: h3 > span.guideword > span
+  defBlock: .sense-body > .def-block
+  code: .ddef_h > .def-info > .epp-xref
+  gram: .ddef_h > .def-info > .gram .gc
+  domain: .def-info > .domain
+  define: .ddef_h > .def
+  examp: .def-body > .examp
+
+idiom:
+  entry: .pr.idiom-block
+  cid: .idiom-block > .cid
+  title: .idiom-block > .di-title
+  posSense: .idiom-body > .pr.dsense
+
+relative:
+  entry: .pr.relativDiv
+  cid: .pr.relativDiv > .cid
+  title: .pv-block > .di-title
+  posSense: .pv-body > .pr.dsense
+
+kdic:
+  entry: .pr.kdic
+  cid: .pr.kdic > .cid
+  title: .di-title
+  pos: .di-head > .di-info .pos
+  ipaUS: .di-info > .pron-info .ipa
+  trans: .def-body > .trans
+  posSense:
+    - .pos-body > .pr.dsense
+    - .pos-body > .runon
+  pvTitle: .runon-head > .runon-title
+  defBlock:
+    - .sense-body > .def-block
+    - .runon-body > .def-block
+
+# All available
+cssAll:
+  - css
+  - idiom
+  - relative
+  - kdic
+
+# Select size
+# 1st: Required (1 & 0)
+# 2nd: Size (1 or + any)
+size:
+  entry: "1+"
+  cid: "11"
+  title: "11"
+  posSense: "1+"
+
+# Undefine
+undefined:
+  - "#dataset_"
+  - "#sandbox_examples"
+
+# Ignore
+ignore:
+  - amp-audio
+  - amp-accordion
+  - script
+  - .dimg # image
+  - .irreg-infls # take
+  - .xref.hax # take reference links
+  - .bb.hax
+  - .pr.di.superentry > small.lbt.had
+  # Manually
+  - .pos-header .region
+  - .pos-header .var
+  - .pos-header > span > .pron
+  - .pos-header .spellvar
+  - .pos-header .domain
+  - .pos-header .anc-info-head
+  - .pos-header .gram
+  - .pos-header .lab
+  - .di-info .domain
+  - .di-info .region
+  - .di-info .usage
+  - .di-info .var
+  - .di-title h2.c_hh
+  - .di-info .lab
+  - .spellvar
+  - .pr.entry-body__el > .pos-body > .pv-block
+  - .pv-block > .di-info > span > .pron > .ipa
+  - .pos-body .daccord
+  - .pos-body > .runon
+  - .pv-body > .pr.runon
+  - .pr.dsense > .dsense_h > .hw, .pos
+  - .pr.dsense > .sense-body > .pr.phrase-block
+  - h3.dsense_h > .dgram
+  - .ddef_h > .def-info > .lab, .var
+  - .smartt.daccord
+  - .def-block .ipa, .region
+  - .x.dx
+  - .mod.mod-pronounce
+  - .definition-src
+  - .panel

@@ -1,0 +1,6 @@
+cssselect
+lemminflect
+lxml
+pymongo
+PyYAML
+Scrapy

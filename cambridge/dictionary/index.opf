@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns:xx="http://saxon.sf.net/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/metadata/dublin_core" unique-identifier="BookId" version="2.0">
+
+	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+		<dc-metadata xmlns:dc="http://purl.org/metadata/dublin_core" xmlns:oebpackage="http://openbook.org/namespaces/oeb-package/1.0/">
+			<dc:title>{dictname}</dc:title>
+			<dc:language>en-US</dc:language>
+			<dc:creator>{creator}</dc:creator>
+			<dc:publisher>{publisher}</dc:publisher>
+			<dc:date>{generateDay}</dc:date>
+			<dc:contributor>{contributor}</dc:contributor>
+			<dc:description>{description}</dc:description>
+			<meta name="cover" content="img-cov" />
+		</dc-metadata>
+		<x-metadata>
+			<EmbeddedCover>{cover}</EmbeddedCover>
+			<DictionaryInLanguage>{inLanguage}</DictionaryInLanguage>
+			<DictionaryOutLanguage>{outLanguage}</DictionaryOutLanguage>
+			<DefaultLookupIndex>{lookupIndex}</DefaultLookupIndex>
+		</x-metadata>
+	</metadata>
+
+	<manifest>
+
+		<!-- <item id="stylesheet" href="style.css" media-type="text/css"/> -->
+		<item id="info" href="info.html" media-type="application/xhtml+xml" />
+		{lst_item}
+		<!-- images -->
+		<item id="cover" href="{cover}" media-type="image/jpeg" />
+
+	</manifest>
+
+	<spine toc="ncx">
+		<itemref idref="info" />
+		{lst_itemref}
+	</spine>
+
+</package>
